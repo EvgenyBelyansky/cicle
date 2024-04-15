@@ -54,7 +54,7 @@ public class Main {
 
         System.out.println("\n\nЗадача № 9.2");
         for (int i = 1, deposit2 = 0; i <= 12; i++) {
-            deposit2 = (int)((deposit2 + 29000) * 1.01);
+            deposit2 = (int) ((deposit2 + 29000) * 1.01);
             System.out.printf("\nМесяц %s, сумма накоплений равна %s рублей", i, deposit2);
         }
 
