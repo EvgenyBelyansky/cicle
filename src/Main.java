@@ -22,7 +22,9 @@ public class Main {
 
         System.out.println("\nЗадача № 5");
         for (int x = 1904; x <= 2096; x += 4) {
-            System.out.println(x + " год является високосным.");
+            if (x % 100 != 0 || x % 400 == 0) {
+                System.out.println(x + " год является високосным.");
+            }
         }
 
         System.out.println("\nЗадача № 6");
@@ -43,14 +45,19 @@ public class Main {
             System.out.printf("\nМесяц %s, сумма накоплений равна %s рублей", month, total);
         }
 
+
         System.out.println("\n\nЗадача № 9");
-        int deposit2 = 29000;
-        int total2 = 0;
-        for (int month = 1; month <= 12; month++) {
-            total2 += total2 / 100;
-            total2 = total2 + deposit2;
-            System.out.format("\nМесяц %s, сумма накоплений равна %,d рублей", month, total2);
+        for (int i = 1, deposit2 = 29000; i <= 12; i++, deposit2 += 29000) {
+            deposit2 *= 1.01;
+            System.out.printf("\nМесяц %s, сумма накоплений равна %s рублей", i, deposit2);
         }
+
+        System.out.println("\n\nЗадача № 9.2");
+        for (int i = 1, deposit2 = 0; i <= 12; i++) {
+            deposit2 = (int)((deposit2 + 29000) * 1.01);
+            System.out.printf("\nМесяц %s, сумма накоплений равна %s рублей", i, deposit2);
+        }
+
 
         System.out.println("\n\nЗадача № 10");
         int x = 2;
